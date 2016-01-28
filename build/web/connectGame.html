@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/jquery-2.2.0.js"></script>
+        <script src="connectGame.js"></script>
+        <style>
+            div#card{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="connectGame">
+            <button id="btnTemp">connect</button>
+            <div id="msg"></div>
+        </div>
+        <div id="ShowGameList" hidden>
+            <div id="gamelist">
+            </div>
+        </div>
+        <div id="WaitingGame" hidden>
+            Waiting Game......
+        </div>
+        <div id="inGame" hidden>
+            <div id="gameMessage"></div>
+            <div id="turn"></div>
+            <div id="choosencolor" hidden>
+                <button name="colorChoose" onclick="wildCardSelected('B')">
+                    Blue
+                </button>
+                <button name="colorChoose" onclick="wildCardSelected('Y')">
+                    Yellow
+                </button>
+                <button name="colorChoose" onclick="wildCardSelected('R')">
+                    Red
+                </button>
+                <button name="colorChoose" onclick="wildCardSelected('G')">
+                    Green
+                </button>
+            </div>
+            <div id="CardinHand">
+                <button id="Uno" onclick="callUno()" disabled>UNO</button>
+                <button id="SkipTurn" onclick="skipTurn()" disabled>Skip Turn</button>
+                <div id="Cards">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="ShowScore"></div>
+    </body>
+</html>
