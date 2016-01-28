@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/jquery-2.2.0.js"></script>
+        <script src="createGame.js"></script>
+
+        <style>
+            div#card{
+                display: inline;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="CreateGameDiv" align="center">
+            <center><h1>Create Game</h1></center>
+            <table>
+                <tr>
+                    <td align="right">Game ID</td>
+                    <td><input type="number" id="GameId"></td>
+                </tr>
+                <tr>
+                    <td align="right">Description</td>
+                    <td><input type="text" id="Description"></td>
+                </tr>
+                <tr>
+                    <td align="right">Number of Players</td>
+                    <td><input type="number" id="NoOfPlayer"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button id="creategame">Create Game</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="WaitingGameDiv" hidden align="center">
+            <table>
+                <tr>
+                    <td align="right">Game ID :</td>
+                    <td><div id="gameIdShow"></div></td>
+                </tr>
+                <tr>
+                    <td align="right">Players joined :</td>
+                    <td><div id="playersjoined"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button id="StartGamebtn" disabled>Start Game</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="inGame" hidden>
+            <div id="gameMessage"></div>
+            <div id="PlayerList"></div>
+            <div id="DiscardedCardsMsg">
+                <h1>Discarded Cards</h1>
+            </div>
+            <div id="DiscardedCards" style="position: relative;"></div> 
+            <div id="DrawPileMsg" style="position: relative;top: 250px;"><h1>Draw Pile</h1></div>
+            <div id="DrawPile" style="position: relative;top: 240px;"></div>
+        </div>
+        <div id="ShowScore" hidden></div>
+    </body>
+</html>
